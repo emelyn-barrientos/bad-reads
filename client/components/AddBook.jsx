@@ -8,13 +8,20 @@ import React, { useEffect } from 'react'
 // [] Create new ADD_FRUIT action and import
 // [] Create new addNewBook reducer & possibly thunk?
 
+function AddBook() {
+
   return (
     <div>
       <form>
-        <label></label>
+        <label htmlFor='book'>Add New Book: </label>
+        <input id='book'/>
+        <label htmlFor='book'>Author: </label>
+        <input id='author'/>
+        <label htmlFor='raiting'>badreads Rating: </label>
+        <input id='rating'/>
       </form>
     </div>
   )
 }
 
-export default AllBooksList
+export default AddBook

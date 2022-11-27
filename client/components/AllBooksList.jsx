@@ -18,13 +18,13 @@ function AllBooksList() {
           return <li key={book.id}>
             <p>Title:  {book.title}</p>
             <p>Author:  {book.author}</p>
-            <p>My Rating:  {book.rating}</p>
+            <p>badreads Rating:  {book.rating}</p>
           </li>
         }
         )}
       </ul>
     </div>
-)
+  )
 }
 
 export default AllBooksList
