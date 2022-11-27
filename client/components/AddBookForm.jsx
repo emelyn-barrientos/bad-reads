@@ -14,11 +14,16 @@ function AddBookForm() {
   const [ newBook, setNewBook ] = useState('')
   const dispatch = useDispatch()
 
-  const handleChange = (evt) => setNewBook(evt.target.value) 
+  const handleChange = (evt) => {
+    setNewBook({
+      ...newBook,
+      [evt.target.name]: evt.target.value,
+    }) 
+  }
 
   const handleSubmit = (evt) => {
     evt.preventDefault()
-
+    console.log('newBook: ', newBook)
     dispatch(setNewBook(newBook))
     setNewBook('')
   }
@@ -34,8 +39,8 @@ function AddBookForm() {
         <input type='text' id='author' name='author' value={newBook.author} onChange={handleChange}/>
 
         <label htmlFor='ratiing'>Your Bad Rating:</label>
-        <input type='text' id='rating' name='rating' value={newBook.rating} onChange={handleChange}/>
-        
+        <input type='number' id='rating' name='rating' value={newBook.rating} onChange={handleChange}/>
+
         <button>Submit</button>
       </form>
     </div>
