@@ -5,13 +5,11 @@ import AllBooksList from './AllBooksList'
 
 function App() {
 
-  return (
-    <>
-      <div>
-        <Header />
-        <AllBooksList />
-      </div>
-    </>
+return (
+    <div>
+      <Header />
+      <AllBooksList />
+    </div>
   )
 }
 
