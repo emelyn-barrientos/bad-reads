@@ -7,7 +7,6 @@ const router = express.Router()
 router.get('/', (req, res) => {
   db.getAllBooks()
     .then((results) => {
-      console.log('getAllBooks results: ', results)
       res.json({ books: results.map((book) => book) })
     })
     .catch((err) => {
