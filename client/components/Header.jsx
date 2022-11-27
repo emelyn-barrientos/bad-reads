@@ -5,8 +5,8 @@ function Header() {
   return (
     <>
       <div>
-        <h1>Better Reads</h1>
-        <h2>Because books deserve better & I have some hot takes on the most popular titles.</h2>
+        <h1>badreads</h1>
+        <h2>Because readers deserve better to know the real tea with overhyped books...</h2>
       </div>
     </>
   )
