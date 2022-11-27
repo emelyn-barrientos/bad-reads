@@ -12,7 +12,7 @@ function AllBooksList() {
 
   return (
     <div>
-      <h3>Books I've read recently:</h3>
+      <h3>Recent hot takes on popular reads:</h3>
       <ul>
         {books && books.map((book) => {
           return <li key={book.id}>
