@@ -18,7 +18,7 @@ function AllBooksList() {
           return <li key={book.id}>
             <p>Title:  {book.title}</p>
             <p>Author:  {book.author}</p>
-            <p>My Rating:  {book.my_rating}</p>
+            <p>My Rating:  {book.rating}</p>
           </li>
         }
         )}
