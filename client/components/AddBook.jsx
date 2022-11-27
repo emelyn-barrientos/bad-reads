@@ -1,24 +1,38 @@
-import React, { useEffect } from 'react'
+import React, { useState } from 'react'
+import { useDispatch } from 'react-redux'
 
 //-- TODOs --//
 // [] Create form to add new book
-// [] Create button for add new book
-// [] Create eventHandlers for onSubmit and onChange
-// [] Import useDispatch, useState hooks
+// [x] Create button for add new book
+// [x] Create eventHandlers for onSubmit and onChange
+// [x] Import useDispatch, useState hooks
 // [] Create new ADD_FRUIT action and import
 // [] Create new addNewBook reducer & possibly thunk?
 
 function AddBook() {
+  
+  const [ newBook, setNewBook ] = useState('')
+  const dispatch = useDispatch()
+
+  const handleChange = (evt) => setNewBook(evt.target.value) 
+
+  const handleSubmit = (evt) => {
+    evt.preventDefault()
+
+    dispatch(setNewBook(newBook))
+    setNewBook('')
+  }
 
   return (
     <div>
-      <form>
-        <label htmlFor='book'>Add New Book: </label>
-        <input id='book'/>
-        <label htmlFor='book'>Author: </label>
+      <form onSubmit={handleSubmit}>
+        <label htmlFor='book'>Add Bad Book: </label>
+        <input id='book' type='text' value={newBook} onChange={handleChange}/>
+        <button>Submit</button>
+        {/* <label htmlFor='book'>Author: </label>
         <input id='author'/>
         <label htmlFor='raiting'>badreads Rating: </label>
-        <input id='rating'/>
+        <input id='rating'/> */}
       </form>
     </div>
   )
