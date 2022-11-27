@@ -1,8 +1,10 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
 
+import { addBook } from '../actions'
+
 //-- TODOs --//
-// [] Create form to add new book
+// [x] Create form to add new book
 // [x] Create button for add new book
 // [x] Create eventHandlers for onSubmit and onChange
 // [x] Import useDispatch, useState hooks
@@ -23,8 +25,7 @@ function AddBookForm() {
 
   const handleSubmit = (evt) => {
     evt.preventDefault()
-    console.log('newBook: ', newBook)
-    dispatch(setNewBook(newBook))
+    dispatch(addBook(newBook))
     setNewBook('')
   }
 
