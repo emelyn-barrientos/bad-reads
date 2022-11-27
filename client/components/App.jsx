@@ -2,7 +2,7 @@ import React from 'react'
 
 import Header from './Header'
 import AllBooksList from './AllBooksList'
-import AddBook from './AddBook'
+import AddBookForm from './AddBookForm'
 
 function App() {
 
@@ -10,7 +10,7 @@ function App() {
     <div>
       <Header />
       <AllBooksList />
-      <AddBook />
+      <AddBookForm/>
     </div>
   )
 }
