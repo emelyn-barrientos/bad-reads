@@ -27,7 +27,11 @@ function AddBookForm() {
   const handleSubmit = (evt) => {
     evt.preventDefault()
     dispatch(addNewBook(newBook))
-    setNewBook('')
+    setNewBook({
+      title: '',
+      author: '',
+      rating: ''
+    })
   }
 
   return (
@@ -36,13 +40,13 @@ function AddBookForm() {
       <div className='form-container'>
         <form onSubmit={handleSubmit}>
           <label htmlFor='title'>Title: </label>
-          <input type='text' id='title' name='title' onChange={handleChange}/>
+          <input type='text' id='title' name='title' value={newBook.title} onChange={handleChange}/>
 
           <label htmlFor='author'>Author: </label>
-          <input type='text' id='author' name='author' onChange={handleChange}/>
+          <input type='text' id='author' name='author' value={newBook.author} onChange={handleChange}/>
 
-          <label htmlFor='ratiing'>Your Bad Rating:</label>
-          <input type='number' id='rating' name='rating' onChange={handleChange}/>
+          <label htmlFor='rating'>Your Bad Rating:</label>
+          <input type='number' id='rating' name='rating' value={newBook.rating} onChange={handleChange}/>
 
           <button>Submit</button>
         </form>
