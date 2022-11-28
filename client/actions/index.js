@@ -1,5 +1,6 @@
 export const SET_BOOKS = 'SET_BOOKS'
 export const ADD_BOOK ='ADD_BOOK'
+export const DELETE_BOOK = 'DELETE_BOOK'
 
 
 import { getListOfBooks, addNewBookToList } from '../apis/booksApi'
@@ -15,6 +16,13 @@ export function addBook(newBook) {
   return {
     type: ADD_BOOK,
     payload: newBook
+  }
+}
+
+export function deleteBook(id) {
+  return {
+    type: DELETE_BOOK,
+    payload: id
   }
 }
 
@@ -35,5 +43,11 @@ export function addNewBook(bookObj) {
     .catch((err) => {
       console.log(err.message)
     })
+  }
+}
+
+export function removeBook(id) {
+  return (dispatch) => {
+    dispatch(deleteBook(id))
   }
 }
