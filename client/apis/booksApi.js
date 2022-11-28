@@ -7,3 +7,12 @@ export function getListOfBooks() {
     return res.body.books
   })
 }
+
+export function addNewBookToList() {
+  return request.post(rootUrl + '/books').then((res) => {
+    console.log('res.body.newBook: ', res.body.newBook)
+    return res.body.newBook
+  })
+}
+
+
