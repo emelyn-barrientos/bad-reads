@@ -1,4 +1,5 @@
 const express = require('express')
+const req = require('express/lib/request')
 
 const db = require('../db/books')
 
@@ -9,10 +10,18 @@ router.get('/', (req, res) => {
     .then((results) => {
       res.json({ books: results.map((book) => book) })
     })
-    .catch((err) => {
-      console.log(err)
-      res.status(500).json({ message: 'Something went wrong' })
+    .catch((err) => res.status(500).json( {message: err.message} ))
+})
+
+router.post('/', (req, res) => {
+  const newBook = req.body
+  console.log(newBook)
+
+  db.addBook(newBook)
+    .then((bookArr) => {
+      res.json(bookArr)
     })
+    .catch((err) => res.status(500).json( {message: err.message} ))
 })
 
 module.exports = router
