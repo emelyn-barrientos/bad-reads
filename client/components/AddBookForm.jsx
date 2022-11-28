@@ -33,18 +33,20 @@ function AddBookForm() {
   return (
     <div>
       <h3>Add New Bad Read: </h3>
-      <form onSubmit={handleSubmit}>
-        <label htmlFor='title'>Title: </label>
-        <input type='text' id='title' name='title' onChange={handleChange}/>
+      <div className='form-container'>
+        <form onSubmit={handleSubmit}>
+          <label htmlFor='title'>Title: </label>
+          <input type='text' id='title' name='title' onChange={handleChange}/>
 
-        <label htmlFor='author'>Author: </label>
-        <input type='text' id='author' name='author' onChange={handleChange}/>
+          <label htmlFor='author'>Author: </label>
+          <input type='text' id='author' name='author' onChange={handleChange}/>
 
-        <label htmlFor='ratiing'>Your Bad Rating:</label>
-        <input type='number' id='rating' name='rating' onChange={handleChange}/>
+          <label htmlFor='ratiing'>Your Bad Rating:</label>
+          <input type='number' id='rating' name='rating' onChange={handleChange}/>
 
-        <button>Submit</button>
-      </form>
+          <button>Submit</button>
+        </form>
+      </div>
     </div>
   )
 }
