@@ -9,10 +9,20 @@ router.get('/', (req, res) => {
     .then((results) => {
       res.json({ books: results.map((book) => book) })
     })
-    .catch((err) => {
-      console.log(err)
-      res.status(500).json({ message: 'Something went wrong' })
+    .catch((err) => res.status(500).json( {message: err.message} ))
+})
+
+router.post('/', (req, res) => {
+  const newBook = req.body
+
+  db.addBook(newBook)
+    .then((id) => {
+      return db.getBookById(id)
     })
+    .then((results) => {
+      res.json(results)
+    })
+    .catch((err) => res.status(500).json( {message: err.message} ))
 })
 
 module.exports = router

@@ -18,7 +18,7 @@ function AllBooksList() {
   return (
     <div>
       <ul>
-        {books.map(book => {
+        {books && books.map(book => {
           return <Book key={book.id} title={book.title} author={book.author} rating={book.rating}/>
         })}
       </ul>
