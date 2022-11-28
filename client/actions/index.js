@@ -3,7 +3,7 @@ export const ADD_BOOK ='ADD_BOOK'
 export const DELETE_BOOK = 'DELETE_BOOK'
 
 
-import { getListOfBooks, addNewBookToList } from '../apis/booksApi'
+import { getListOfBooks, addNewBookToList, deleteThisBook } from '../apis/booksApi'
 
 export function setBooks(books) {
   return {
@@ -48,6 +48,12 @@ export function addNewBook(bookObj) {
 
 export function removeBook(id) {
   return (dispatch) => {
-    dispatch(deleteBook(id))
+    deleteThisBook(id)
+      .then(() => {
+        dispatch(deleteBook(id))
+      })
+      .catch((err) => {
+        console.log(err.message)
+      })
   }
 }
