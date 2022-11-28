@@ -4,7 +4,7 @@ input {
   margin-bottom: 1rem;
 }
 
-button {
+.submit {
   background-color: #fd00b1;
   color: #ffffff;
   font-size: 1rem;
@@ -17,7 +17,7 @@ button {
   border-radius: 10rem;
 }
 
-button:hover, button:focus {
+.submit:hover, button:focus {
   background-color: #c400c4;
   transition: 0.15s;
 }

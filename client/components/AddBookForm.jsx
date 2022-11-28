@@ -48,7 +48,7 @@ function AddBookForm() {
           <label htmlFor='rating'>Your Bad Rating:</label>
           <input type='number' id='rating' name='rating' value={newBook.rating} onChange={handleChange}/>
 
-          <button>Submit</button>
+          <button className='submit'>Submit</button>
         </form>
       </div>
     </div>
