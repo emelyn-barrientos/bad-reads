@@ -1,0 +1,23 @@
+input {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+button {
+  background-color: #fd00b1;
+  color: #ffffff;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.10rem;
+  width: auto;
+  height: auto;
+  padding: 0.75rem 1.25rem;
+  border: none;
+  border-radius: 10rem;
+}
+
+button:hover, button:focus {
+  background-color: #c400c4;
+  transition: 0.15s;
+}
