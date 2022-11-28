@@ -1,5 +1,4 @@
 const express = require('express')
-const req = require('express/lib/request')
 
 const db = require('../db/books')
 
@@ -15,11 +14,13 @@ router.get('/', (req, res) => {
 
 router.post('/', (req, res) => {
   const newBook = req.body
-  console.log(newBook)
 
   db.addBook(newBook)
-    .then((bookArr) => {
-      res.json(bookArr)
+    .then((id) => {
+      return db.getBookById(id)
+    })
+    .then((results) => {
+      res.json(results)
     })
     .catch((err) => res.status(500).json( {message: err.message} ))
 })

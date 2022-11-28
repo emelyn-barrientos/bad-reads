@@ -1,7 +1,7 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useDispatch } from 'react-redux'
 
-import { addBook } from '../actions'
+import { addNewBook } from '../actions'
 
 function AddBookForm() {
   
@@ -10,6 +10,11 @@ function AddBookForm() {
     author: '',
     rating: ''
   })
+
+  useEffect(() => {
+    
+  },[newBook])
+
   const dispatch = useDispatch()
 
   const handleChange = (evt) => {
@@ -21,7 +26,7 @@ function AddBookForm() {
 
   const handleSubmit = (evt) => {
     evt.preventDefault()
-    dispatch(addBook(newBook))
+    dispatch(addNewBook(newBook))
     setNewBook('')
   }
 

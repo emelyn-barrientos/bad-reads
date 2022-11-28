@@ -5,7 +5,6 @@ export const ADD_BOOK ='ADD_BOOK'
 import { getListOfBooks, addNewBookToList } from '../apis/booksApi'
 
 export function setBooks(books) {
-  console.log('setBooks payload: ', books)
   return {
     type: SET_BOOKS,
     payload: books,
@@ -28,10 +27,13 @@ export function fetchBooks() {
   }
 }
 
-export function addNewBook() {
+export function addNewBook(bookObj) {
   return (dispatch) => {
-    return addNewBookToList().then((newBook) => {
-      dispatch(addBook(newBook))
+    addNewBookToList(bookObj).then((book) => {
+      dispatch(addBook(book))
+    })
+    .catch((err) => {
+      console.log(err.message)
     })
   }
 }

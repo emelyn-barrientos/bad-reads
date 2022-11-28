@@ -8,10 +8,9 @@ export function getListOfBooks() {
   })
 }
 
-export function addNewBookToList() {
-  return request.post(rootUrl + '/books').then((res) => {
-    console.log('res.body.newBook: ', res.body.newBook)
-    return res.body.newBook
+export function addNewBookToList(newBook) {
+  return request.post(rootUrl + '/books').send(newBook).then((res) => {
+    return res.body
   })
 }
 
