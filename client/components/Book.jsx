@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import { useDispatch } from 'react-redux'
 
@@ -8,6 +8,7 @@ function Book(props) {
 
   const { id, title, author, rating } = props
 
+  const [ isShown, setIsShown ] = useState(false)
 
   const dispatch = useDispatch()
 
