@@ -4,23 +4,14 @@ import { useDispatch } from 'react-redux'
 
 import { removeBook } from '../actions'
 
-// DELETE BOOK FEATURE
-// [x] Import useDispatch
-// [x] Add onClick event handler and button
-// [x] Dispatch book ID to thunk
-// [] Make deleteBook thunk
-// [] Make deleteBook api request
-// [] Import removeBook from actions
-// [] Make deleteBook action
-
-
 function Book(props) {
 
   const { id, title, author, rating } = props
 
+
   const dispatch = useDispatch()
 
-  const handleClick = (id) => {
+  const handleClick = () => {
     dispatch(removeBook(id))
   }
 
