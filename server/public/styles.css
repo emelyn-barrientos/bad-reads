@@ -1,12 +1,71 @@
-input {
+body {
+  background-color: #f5efed;
+  color: #29335c;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 2rem;
+  row-gap: 2rem;
+  justify-content: space-around;
+  list-style: none;
+}
+
+form {
   display: flex;
   flex-direction: column;
+  width: 20rem;
+}
+
+input {
+  display: flex;
+  flex-direction: row;
   margin-bottom: 1rem;
 }
 
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.book-card {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-around;
+  overflow: hidden;
+  background-color: #29335c;
+  width: 15rem;
+  height: auto;
+  border-style: solid;
+  border-color: #337357;
+  border-width: 0.25rem;
+  border-radius: 0.75rem;
+  color: #F5EFED;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 1rem
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3rem;
+}
+
 .submit {
-  background-color: #fd00b1;
-  color: #ffffff;
+  background-color: #F3A712;
+  color: #29335c ;
   font-size: 14px;
   text-transform: uppercase;
   letter-spacing: 0.10rem;
@@ -18,12 +77,12 @@ input {
 }
 
 .submit:hover, button:focus {
-  background-color: #c400c4;
+  background-color: #c78707;
   transition: 0.15s;
 }
 
 .delete {
-  background-color: #3330c5;
+  background-color: #DB2B39;
   color: #ffffff;
   font-size: 14px;
   text-transform: uppercase;
@@ -36,6 +95,6 @@ input {
 }
 
 .delete:hover, button:focus {
-  background-color: #073496;
+  background-color: #a2222d;
   transition: 0.15s;
 }

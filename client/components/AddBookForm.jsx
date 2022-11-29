@@ -32,9 +32,9 @@ function AddBookForm() {
   }
 
   return (
-    <div>
+    <div className="form-container">
       <h3>Add New Bad Read: </h3>
-      <div className="form-container">
+      <div>
         <form onSubmit={handleSubmit}>
           <label htmlFor="title">Title: </label>
           <input
