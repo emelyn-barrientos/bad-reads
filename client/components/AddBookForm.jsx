@@ -43,6 +43,7 @@ function AddBookForm() {
             name="title"
             value={newBook.title}
             onChange={handleChange}
+            placeholder="ex. Fifty Shades of Grey"
             required
           />
 
@@ -53,6 +54,7 @@ function AddBookForm() {
             name="author"
             value={newBook.author}
             onChange={handleChange}
+            placeholder="ex. E. L. James"
             required
           />
 
@@ -63,6 +65,7 @@ function AddBookForm() {
             name="rating"
             value={newBook.rating}
             onChange={handleChange}
+            placeholder="0 - 3 rating only!"
             required
           />
 
