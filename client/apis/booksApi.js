@@ -14,4 +14,10 @@ export function addNewBookToList(newBook) {
   })
 }
 
+export function deleteThisBook(id) {
+  return request.delete(rootUrl + '/books/' + id).then((res) => {
+    return res.body
+  })
+}
+
 
