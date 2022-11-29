@@ -25,4 +25,15 @@ router.post('/', (req, res) => {
     .catch((err) => res.status(500).json( {message: err.message} ))
 })
 
+router.delete('/:id', (req, res) => {
+  const id = req.params.id
+  db.deleteOneBook(id)
+    .then(() => {
+      return res.sendStatus(200)
+    })
+    .catch((err) => {
+      console.log(err.message)
+    })
+})
+
 module.exports = router
