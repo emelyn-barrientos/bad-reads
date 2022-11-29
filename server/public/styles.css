@@ -16,6 +16,18 @@ ul {
   list-style: none;
 }
 
+form {
+  display: flex;
+  flex-direction: column;
+  width: 20rem;
+}
+
+input {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 1rem;
+}
+
 .header {
   display: flex;
   flex-direction: column;
@@ -42,10 +54,11 @@ ul {
   padding: 1rem
 }
 
-input {
+.form-container {
   display: flex;
-  flex-direction: row;
-  margin-bottom: 1rem;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3rem;
 }
 
 .submit {
