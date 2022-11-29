@@ -16,7 +16,7 @@ function Book(props) {
   }
 
   return (
-    <div>
+    <div className='book-card'>
       <li key={id}>
         <p>Title:  {title}</p>
         <p>Author:  {author}</p>
