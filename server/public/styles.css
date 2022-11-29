@@ -24,7 +24,7 @@ ul {
 
 .book-card {
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   justify-content: space-around;
   overflow: hidden;
   width: 15rem;
@@ -49,8 +49,8 @@ input {
 }
 
 .submit {
-  background-color: #fd00b1;
-  color: #ffffff;
+  background-color: #F3A712;
+  color: #29335c ;
   font-size: 14px;
   text-transform: uppercase;
   letter-spacing: 0.10rem;
@@ -62,12 +62,12 @@ input {
 }
 
 .submit:hover, button:focus {
-  background-color: #c400c4;
+  background-color: #c78707;
   transition: 0.15s;
 }
 
 .delete {
-  background-color: #3330c5;
+  background-color: #DB2B39;
   color: #ffffff;
   font-size: 14px;
   text-transform: uppercase;
@@ -80,6 +80,6 @@ input {
 }
 
 .delete:hover, button:focus {
-  background-color: #073496;
+  background-color: #a2222d;
   transition: 0.15s;
 }
