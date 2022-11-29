@@ -1,4 +1,4 @@
-import { SET_BOOKS, ADD_BOOK } from '../actions'
+import { SET_BOOKS, ADD_BOOK, DELETE_BOOK } from '../actions'
 
 const initialState = []
 
@@ -11,14 +11,12 @@ const reducer = (state = initialState, action) => {
     case ADD_BOOK:
       return  [...state, payload ]
 
+    case DELETE_BOOK:
+      return state.filter((book) => book.id !== payload)
+    
     default:
       return state
   }
 }
 
 export default reducer
-
-// {
-//   type: 'ADD_BOOK',
-//   payload: { title: 'cccc', author: 'ccccc', rating: '1'
-// }
