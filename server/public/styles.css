@@ -39,12 +39,14 @@ input {
   flex-direction: column-reverse;
   justify-content: space-around;
   overflow: hidden;
+  background-color: #29335c;
   width: 15rem;
   height: auto;
   border-style: solid;
   border-color: #337357;
-  border-width: 0.15rem;
+  border-width: 0.25rem;
   border-radius: 0.75rem;
+  color: #F5EFED;
 }
 
 .card-content {
