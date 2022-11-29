@@ -4,16 +4,13 @@ import { useDispatch } from 'react-redux'
 import { addNewBook } from '../actions'
 
 function AddBookForm() {
-  
-  const [ newBook, setNewBook ] = useState({
+  const [newBook, setNewBook] = useState({
     title: '',
     author: '',
-    rating: ''
+    rating: '',
   })
 
-  useEffect(() => {
-    
-  },[newBook])
+  useEffect(() => {}, [newBook])
 
   const dispatch = useDispatch()
 
@@ -21,7 +18,7 @@ function AddBookForm() {
     setNewBook({
       ...newBook,
       [evt.target.name]: evt.target.value,
-    }) 
+    })
   }
 
   const handleSubmit = (evt) => {
@@ -30,25 +27,52 @@ function AddBookForm() {
     setNewBook({
       title: '',
       author: '',
-      rating: ''
+      rating: '',
     })
   }
 
   return (
     <div>
       <h3>Add New Bad Read: </h3>
-      <div className='form-container'>
+      <div className="form-container">
         <form onSubmit={handleSubmit}>
-          <label htmlFor='title'>Title: </label>
-          <input type='text' id='title' name='title' value={newBook.title} onChange={handleChange}/>
+          <label htmlFor="title">Title: </label>
+          <input
+            type="text"
+            id="title"
+            name="title"
+            value={newBook.title}
+            onChange={handleChange}
+            placeholder="ex. Fifty Shades of Grey"
+            required
+          />
 
-          <label htmlFor='author'>Author: </label>
-          <input type='text' id='author' name='author' value={newBook.author} onChange={handleChange}/>
+          <label htmlFor="author">Author: </label>
+          <input
+            type="text"
+            id="author"
+            name="author"
+            value={newBook.author}
+            onChange={handleChange}
+            placeholder="ex. E. L. James"
+            required
+          />
 
-          <label htmlFor='rating'>Your Bad Rating:</label>
-          <input type='number' id='rating' name='rating' value={newBook.rating} onChange={handleChange}/>
+          <label htmlFor="rating">Your Bad Rating:</label>
+          <input
+            type="number"
+            id="rating"
+            name="rating"
+            value={newBook.rating}
+            onChange={handleChange}
+            min="0"
+            max="3"
+            step="0.5"
+            placeholder="0 - 3 rating only!"
+            required
+          />
 
-          <button className='submit'>Submit</button>
+          <button className="submit">Submit</button>
         </form>
       </div>
     </div>
