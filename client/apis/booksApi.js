@@ -15,8 +15,8 @@ export function addNewBookToList(newBook) {
 }
 
 export function deleteThisBook(id) {
-  return request.delete(rootUrl + '/books', id).then(()=> {
-    return alert('Book successfully deleted')
+  return request.delete(rootUrl + '/books/' + id).then((res) => {
+    return res.body
   })
 }
 
