@@ -9,9 +9,12 @@ export function getListOfBooks() {
 }
 
 export function addNewBookToList(newBook) {
-  return request.post(rootUrl + '/books').send(newBook).then((res) => {
-    return res.body
-  })
+  return request
+    .post(rootUrl + '/books')
+    .send(newBook)
+    .then((res) => {
+      return res.body
+    })
 }
 
 export function deleteThisBook(id) {
@@ -19,5 +22,3 @@ export function deleteThisBook(id) {
     return res.body
   })
 }
-
-
