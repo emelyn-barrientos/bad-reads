@@ -65,6 +65,9 @@ function AddBookForm() {
             name="rating"
             value={newBook.rating}
             onChange={handleChange}
+            min="0"
+            max="3"
+            step="0.5"
             placeholder="0 - 3 rating only!"
             required
           />
