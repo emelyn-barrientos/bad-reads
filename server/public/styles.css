@@ -1,3 +1,8 @@
+body {
+  background-color: #f5efed;
+  color: #29335c;
+}
+
 input {
   display: flex;
   flex-direction: column;
