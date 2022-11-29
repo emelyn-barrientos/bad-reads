@@ -17,12 +17,12 @@ function Book(props) {
   }
 
   return (
-    <div className='book-card'>
+    <div className='book-card' onMouseEnter={() => setIsShown(true)} onMouseLeave={() => setIsShown(false)}>
       <li key={id}>
         <p>Title:  {title}</p>
         <p>Author:  {author}</p>
         <p>badreads Rating:  {rating}</p>
-        <button className='delete' onClick={handleClick}>Delete</button>
+        {isShown && <button className='delete' onClick={handleClick}>Delete</button>}
       </li>
     </div>
   )
