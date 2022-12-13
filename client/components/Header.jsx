@@ -5,7 +5,7 @@ function Header() {
     <div className="header">
       <h1>badreads</h1>
       <h2>
-        Because readers deserve better to know the real tea with overhyped
+        Because readers deserve to know the real tea with overhyped
         books...
       </h2>
     </div>
