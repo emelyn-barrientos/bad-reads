@@ -47,6 +47,9 @@ input {
   border-width: 0.25rem;
   border-radius: 0.75rem;
   color: #F5EFED;
+  box-shadow: 10px 9px 17px -1px rgba(0,0,0,0.37);
+  -webkit-box-shadow: 10px 9px 17px -1px rgba(0,0,0,0.37);
+  -moz-box-shadow: 10px 9px 17px -1px rgba(0,0,0,0.37);
 }
 
 .card-content {
