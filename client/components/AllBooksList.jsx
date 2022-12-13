@@ -15,7 +15,7 @@ function AllBooksList() {
   }, [])
 
   return (
-    <div>
+    <div className="list-container">
       <ul>
         {books &&
           books.map((book) => {
