@@ -29,20 +29,25 @@ export function deleteBook(id) {
 // THUNKS 
 export function fetchBooks() {
   return (dispatch) => {
-    return getListOfBooks().then((books) => {
-      dispatch(setBooks(books))
-    })
+    return getListOfBooks()
+      .then((books) => {
+        dispatch(setBooks(books))
+      })
+      .catch((err) => {
+        console.log(err.message)
+      })
   }
 }
 
 export function addNewBook(bookObj) {
   return (dispatch) => {
-    addNewBookToList(bookObj).then((book) => {
-      dispatch(addBook(book))
-    })
-    .catch((err) => {
-      console.log(err.message)
-    })
+    addNewBookToList(bookObj)
+      .then((book) => {
+        dispatch(addBook(book))
+      })
+      .catch((err) => {
+        console.log(err.message)
+      })
   }
 }
 
