@@ -5,7 +5,6 @@ import { useDispatch } from 'react-redux'
 import { removeBook } from '../actions'
 
 function Book(props) {
-  console.log('props: ', props)
   const { id, title, author, rating } = props.book
 
   const [isShown, setIsShown] = useState(false)
