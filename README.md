@@ -9,6 +9,7 @@ This project is still in its early stages and I'm using it as a way to continue 
 - React.js
 - Redux
 - Redux Thunk
+- Knex.js
 - SQLite3
 - Boilerplate from Dev Academy Aotearoa!
 
@@ -26,6 +27,8 @@ This project is still in its early stages and I'm using it as a way to continue 
 git clone git@github.com:emelyn-barrientos/bad-reads.git
 cd bad-reads
 npm install # to install dependencies
+npm run knex migrate:latest
+npm run knex seed:run
 npm run dev # to start the dev server
 ```
 
