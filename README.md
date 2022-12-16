@@ -1,35 +1,35 @@
-# Boilerplate: Fullstack
+# About badreads 📚 # 
 
-## Setup
+Out of the frustation that 1) goodreads doesn't give out API access anymore and 2) the platform has very skewed ratings for (what I consider) generally bad books, I thought it would be fun to create my own web app that focused on creating a space for people to honestly spill the "tea" on their bad reads!
 
-### What's included
+This project is still in its early stages and I'm using it as a way to continue flexing my full stack coding skills to become more comfortable with building back-end to front-end features. 
 
-This repo includes:
+## TECH USED 👩🏽‍💻 ##
+- JavaScript
+- React.js
+- Redux
+- Redux Thunk
+- Knex.js
+- SQLite3
+- Boilerplate from Dev Academy Aotearoa!
 
-* a single, simple API endpoint (`/api/v1/fruits`)
-* a single React component (`<App />`)
-* an example database module (`server/db/fruits.js`)
-* an API client module (`client/apis/fruits.js`)
-* configuration for Jest and testing library
-* configuration for server-side debugging in VS Code
-* a single client-side test (`client/components/App.test.js`)
+## NEXT STEPS ▶️ ##
+- [ ] Deploy! 
+- [ ] Refactor code
+- [ ] Add authentication for users to sign in
+- [ ] Add new routes for profile pages
+- [ ] Add comment/review section
+- [ ] Explore more APIs for integration
 
 ### Installation
 
-#### **From the Github UI**
-
-See the instructions [here](https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template) to use Github's feature to create a new repo from a template.
-
-#### **From the command line**
-
 ```
-git clone https://github.com/dev-academy-challenges/boilerplate-fullstack [your-project-name]
-cd [your-project-name]
+git clone git@github.com:emelyn-barrientos/bad-reads.git
+cd bad-reads
 npm install # to install dependencies
+npm run knex migrate:latest
+npm run knex seed:run
 npm run dev # to start the dev server
 ```
 
 You can find the server running on [http://localhost:3000](http://localhost:3000).
-
----
-[Provide feedback on this repo](https://docs.google.com/forms/d/e/1FAIpQLSfw4FGdWkLwMLlUaNQ8FtP2CTJdGDUv6Xoxrh19zIrJSkvT4Q/viewform?usp=pp_url&entry.1958421517=boilerplate-fullstack)
